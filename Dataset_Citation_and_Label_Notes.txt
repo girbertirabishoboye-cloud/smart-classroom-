@@ -1,0 +1,9 @@
+DATASET CITATION & LABEL NOTES — SMART CLASSROOM ENERGY SYSTEM
+
+Potential secondary source identified: Stafford, G. A. (2020). Environmental Sensor Telemetry Data. Kaggle. https://www.kaggle.com/datasets/garystafford/environmental-sensor-data-132k
+
+The original Kaggle dataset is documented as environmental telemetry with fields such as timestamp, device, temperature, humidity, light, motion, gas and smoke. The project-supplied smart_lighting_dataset_2024.csv contains 12,000 records and 17 fields including ambient_light_lux, zone_id, occupancy_count, traffic_density, energy consumption fields and lighting_action_class codes 0,1,2. These schemas are not identical.
+
+Before final submission, verify and describe the data-processing/provenance chain. The current training uses target codes 0,1,2 directly, and DOES NOT create binary ON/OFF target labels. The dashboard's separate ON/OFF recommendation is derived from the documented project rule: ON iff motion_detected=1 AND hour_of_day 7..18 inclusive AND ambient_light_lux<300; otherwise OFF.
+
+Academic safeguard: do not assert that class code 0, 1, or 2 means OFF, ON, or DIM without evidence from the dataset documentation.
